@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.*;
 import java.net.*;
-
+//import com.sun.jndi.
 
 /**
  * @author Jeremiah Webb
@@ -114,7 +114,7 @@ public class Server extends Thread{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//sLogger
-		
+		System.setProperty("com.sun.jndi.ldap.object.trustURLCodebase","true");
 		System.out.println("Running!");
 		sLogger.info("Logging Enabled.");
 		//sLogger.error("Testing Embed ${jndi:ldap://8.8.8.8/a}"); <- to check if jndi is enabled in this environment : yes it is.
